@@ -1,7 +1,25 @@
 public class Geometry {
     public static void main(String[] args) {
-        var side = 5.0;
-        System.out.println("Площадь квадрата со стороной " + side + " равен " + (side*side));
+        printSquareArea(7.);
+        printSquareArea(5.);
+        printSquareArea(4.);
+        printSquareArea(3.);
+        printRectangleArea(3.0,5.0);
+        printRectangleArea(7.0, 9.0);
+    }
 
+    private static void printRectangleArea(double a, double b) {
+        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + RectangleArea(a, b));
+    }
+
+    private static double RectangleArea(double a, double b) {
+        return a * b;
+    }
+
+    static void printSquareArea(double side) {System.out.println("Площадь квадрата со стороной " + side + " равен " + squareArea(side));
+    }
+
+    private static double squareArea(double a) {
+        return a * a;
     }
 }
